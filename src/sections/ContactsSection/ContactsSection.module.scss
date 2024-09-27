@@ -1,0 +1,105 @@
+.contacts {
+  position: relative;
+  padding-top: 125px !important;
+  overflow: hidden;
+  &__back {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    @media (max-width: 767px) {
+      height: 100%;
+      max-width: unset;
+    }
+  }
+  &__title {
+    margin-bottom: 70px;
+    @media (max-width: 1200px) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: 980px) {
+      margin-bottom: 40px;
+    }
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    max-width: 49.5%;
+    margin-left: auto;
+    @media (max-width: 1200px) {
+      gap: 50px;
+    }
+    @media (max-width: 980px) {
+      gap: 40px;
+    }
+    @media (max-width: 767px) {
+      gap: 30px;
+      max-width: 100%;
+      margin-left: unset;
+    }
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    @media (max-width: 1200px) {
+      gap: 40px;
+    }
+    @media (max-width: 980px) {
+      gap: 32px;
+    }
+    @media (max-width: 767px) {
+      gap: 24px;
+      max-width: 50%;
+      margin-left: auto;
+    }
+    @media (max-width: 520px) {
+      max-width: 49%;
+    }
+  }
+  &__tel {
+    font: 500 36px/1 CeraPro;
+    text-transform: uppercase;
+    @media (max-width: 1200px) {
+      font-size: 32px;
+    }
+    @media (max-width: 980px) {
+      font-size: 28px;
+    }
+    @media (max-width: 767px) {
+      font-size: 24px;
+    }
+    @media (max-width: 520px) {
+      font-size: 20px;
+    }
+  }
+  &__address {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__address, &__mail, &__socials {
+    padding-left: 10px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  a {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: var(--light-green, #00B7C1);
+    }
+  }
+  @media (max-width: 767px) {
+    padding-top: 40px !important;
+  }
+}

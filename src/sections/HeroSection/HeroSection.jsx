@@ -2,7 +2,7 @@ import React from 'react'
 
 import { hero } from '~/src/utils/hero.js'
 import s from './HeroSection.module.scss'
-import Form from '../../components/Form'
+import Form from '../../components/Forms'
 import Button from '../../components/Button/Button'
 
 export default function HeroSection() {
@@ -20,8 +20,7 @@ export default function HeroSection() {
           <div className={s.hero__wrap}>
             { window.innerWidth > 767 ?
               <div className={s.hero__application}>
-                <h4 class={s.hero__caption}>Оставить заявку</h4>
-                <Form classForm={s.hero__form} classBtn={s.hero__btn} />
+                <Form />
               </div> : 
               <Button className={ s.hero__btn_mb + " popup__btn button"}>Оставить заявку</Button> 
             }

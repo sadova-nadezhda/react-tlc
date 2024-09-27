@@ -1,0 +1,12 @@
+.partners {
+  &__row {
+    display: flex;
+    gap: 30px;
+    @media (max-width: 980px) {
+      gap: 20px;
+    }
+    @media (max-width: 767px) {
+      gap: 16px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.projects {
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 70px;
+    @media (max-width: 1200px) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: 980px) {
+      margin-bottom: 40px;
+    }
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+  &__arrows {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 37px;
+    height: 37px;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--white, #FFFFFF);
+    cursor: pointer;
+    @media (max-width: 980px) {
+      width: 30px;
+      height: 30px;
+    }
+    @media (max-width: 767px) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

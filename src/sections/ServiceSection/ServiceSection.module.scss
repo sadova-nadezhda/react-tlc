@@ -1,0 +1,38 @@
+.services {
+  padding-top: 120px;
+  &__title {
+    margin-bottom: 70px;
+    @media (max-width: 1200px) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: 980px) {
+      margin-bottom: 40px;
+    }
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    counter-reset: num;
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+  @media (max-width: 1200px) {
+    padding-top: 100px;
+  }
+  @media (max-width: 980px) {
+    padding-top: 80px;
+  }
+  @media (max-width: 767px) {
+    padding-top: 50px;
+  }
+}

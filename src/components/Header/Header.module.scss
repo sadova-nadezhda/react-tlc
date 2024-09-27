@@ -106,12 +106,16 @@
   }
   &__call {
     position: relative;
+    padding: 0;
+    border: 0;
+    color: var(--white, #FFFFFF);
+    background: transparent;
     text-transform: uppercase;
     font-weight: 400;
     transition: all 0.3s ease-in-out;
     &::after {
       position: absolute;
-      bottom: 0;
+      top: calc(100% + 4px);
       left: 0;
       right: 0;
       content: "";
@@ -158,9 +162,5 @@
         bottom: 0;
       }
     }
-  }
-  &.scroll {
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
-    background-color: var(--primary-green, #16676B);
   }
 }

@@ -1,0 +1,26 @@
+.partners {
+  overflow: hidden;
+  &__title {
+    margin-bottom: 70px;
+    @media (max-width: 1200px) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: 980px) {
+      margin-bottom: 40px;
+    }
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+  &__marquees {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @media (max-width: 980px) {
+      gap: 20px;
+    }
+    @media (max-width: 767px) {
+      gap: 16px;
+    }
+  }
+}
