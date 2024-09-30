@@ -6,6 +6,7 @@ import Button from '../Button';
 import s from './Header.module.scss';
 
 import logo from '/logo.png';
+import PopupBtn from '../Popup/PopupBtn';
 
 export default function Header() {
 
