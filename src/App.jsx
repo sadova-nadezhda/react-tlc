@@ -17,7 +17,7 @@ export default function App() {
   return (
     <>
       <Popup isOpen={isOpen} closePopup={closePopup}>
-        <Form isShort={false} />
+        <Form />
       </Popup>
       <Header openPopup={openPopup} />
       <MainContent openPopup={openPopup} />
