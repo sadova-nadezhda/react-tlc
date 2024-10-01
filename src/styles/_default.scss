@@ -38,10 +38,15 @@ dd {
 html {
   height: 100%;
   scroll-behavior: smooth;
+  scroll-padding-top: 140px;
   font: 400 16px/1.5 CeraPro;
   color: var(--white, #FFFFFF);
   @media (max-width: 767px) {
+    scroll-padding-top: 130px;
     font: 400 14px/1.5 CeraPro;
+  }
+  @media (max-width: 520px) {
+    scroll-padding-top: 70px;
   }
 }
 

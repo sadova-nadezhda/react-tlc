@@ -50,7 +50,7 @@ export default function Header({ openPopup }) {
             {!isMobile && <HeaderInfo />}
           </div>
           <div className={s.header__row}>
-            <NavMenu isMobile={isMobile} isOpen={isOpen} />
+            <NavMenu isMobile={isMobile} isOpen={isOpen} closeMenu={toggleMenu} />
             <Button className={s.header__call} onClick={openPopup}>
               Заказать звонок
             </Button>
