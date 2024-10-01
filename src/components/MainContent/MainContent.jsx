@@ -6,8 +6,10 @@ import PartnersSection from '../../sections/PartnersSection'
 import AboutSection from '../../sections/AboutSection'
 import ProjectsSection from '../../sections/ProjectsSection'
 import ContactsSection from '../../sections/ContactsSection'
+import ThankSection from '../../sections/ThankSection'
 
 import s from './MainContent.module.scss'
+
 
 export default function MainContent({openPopup}) {
   return (
@@ -18,6 +20,8 @@ export default function MainContent({openPopup}) {
       <AboutSection openPopup={openPopup} />
       <ProjectsSection />
       <ContactsSection />
+
+      {/* <ThankSection /> */}
     </main>
   )
 }

@@ -1,0 +1,21 @@
+.thanks {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    min-height: 80vh;
+  }
+  &__title {
+    text-align: center;
+  }
+  &__btn {
+    color: var(--primary-green, #16676B);
+    background-color: var(--white, #FFFFFF);
+    font-weight: 500;
+    &:hover {
+      border-color: var(--light-green, #00B7C1);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.header {
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @media (max-width: 520px) {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+  &__mail, &__tel {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: var(--light-green, #00B7C1);
+    }
+  }
+}

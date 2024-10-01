@@ -1,5 +1,6 @@
 .hero {
   padding: 60px 0;
+  margin-top: 140px;
   overflow: hidden;
   &__row {
     display: flex;
@@ -21,6 +22,7 @@
     }
   }
   &__subtitle {
+    margin-left: auto;
     font: 700 32px/1.2 CeraPro;
     letter-spacing: 0.02em;
     text-transform: uppercase;
@@ -108,5 +110,11 @@
   }
   @media (max-width: 1200px) {
     padding-bottom: 20px;
+  }
+  @media (max-width: 767px) {
+    margin-top: 130px;
+  }
+  @media (max-width: 520px) {
+    margin-top: 70px;
   }
 }
