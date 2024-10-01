@@ -12,14 +12,14 @@ const options = [
   { value: 'ser3', label: 'Услуга 3' },
 ];
 
-export default function Form({short}) {
+export default function Form({isShort}) {
   return (
     <>
-      {!short &&  <h4 className={s.hero__caption}>Оставить заявку</h4> }
-      <form className={!short ? s.hero__form : s.contacts__form}>
+      {!isShort &&  <h4 className={s.hero__caption}>Оставить заявку</h4> }
+      <form className={!isShort ? s.hero__form : s.contacts__form}>
         <Input type="text" placeholder="Имя *" required />
         <Input type="tel" placeholder="Телефон*" required />
-        {!short && 
+        {!isShort && 
           <>
           <Input type="text" placeholder="Сообщение" />
           <Select options={options} />

@@ -20,7 +20,7 @@ export default function HeroSection({openPopup}) {
           <div className={s.hero__wrap}>
             { window.innerWidth > 767 ?
               <div className={s.hero__application}>
-                <Form short={false} />
+                <Form isShort={false} />
               </div> : 
               <Button onClick={openPopup} className={ s.hero__btn_mb + " popup__btn button"}>Оставить заявку</Button> 
             }
