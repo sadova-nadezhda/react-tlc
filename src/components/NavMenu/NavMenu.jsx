@@ -1,16 +1,15 @@
 import React from 'react';
-import classNames from 'classnames';
 
 import HeaderInfo from '../Header/parts/HeaderInfo';
 
 import {menu} from '../../utils/menu.js';
 
-import s from './NavMenu.module.scss';
+// import s from './NavMenu.module.scss';
 
-export default function NavMenu({isMobile, isOpen, closeMenu }) {
+export default function NavMenu({classMenu, classNav, isMobile, closeMenu }) {
   return (
-    <nav className={classNames(s.header__nav, { [s.open]: isOpen })}>
-      <ul className={s.header__menu}>
+    <nav className={classNav}>
+      <ul className={classMenu}>
         {menu.map((item, index) => (
           <li key={index}>
             <a href={item.href} onClick={closeMenu}>{item.label}</a>

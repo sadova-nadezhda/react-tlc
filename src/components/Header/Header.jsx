@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
+import classNames from 'classnames';
 
 import NavMenu from '../NavMenu';
 import Button from '../Button';
@@ -50,7 +51,7 @@ export default function Header({ openPopup }) {
             {!isMobile && <HeaderInfo />}
           </div>
           <div className={s.header__row}>
-            <NavMenu isMobile={isMobile} isOpen={isOpen} closeMenu={toggleMenu} />
+            <NavMenu classMenu={s.header__menu} classNav={classNames(s.header__nav, { [s.open]: isOpen })} isMobile={isMobile} closeMenu={toggleMenu} />
             <Button className={s.header__call} onClick={openPopup}>
               Заказать звонок
             </Button>
