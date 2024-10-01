@@ -9,7 +9,7 @@ import s from './ServiceSection.module.scss'
 
 export default function ServiceSection() {
   return (
-    <section className={s.services}>
+    <section id='services' className={s.services}>
       <div className="container">
         <div className={s.services__container}>
           <Title className={s.services__title}>{services.title}</Title>

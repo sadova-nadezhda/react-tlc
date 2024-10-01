@@ -9,13 +9,13 @@ import ContactsSection from '../../sections/ContactsSection'
 
 import s from './MainContent.module.scss'
 
-export default function MainContent() {
+export default function MainContent({openPopup}) {
   return (
     <main>
-      <HeroSection />
+      <HeroSection openPopup={openPopup} />
       <ServiceSection />
       <PartnersSection />
-      <AboutSection />
+      <AboutSection openPopup={openPopup} />
       <ProjectsSection />
       <ContactsSection />
     </main>

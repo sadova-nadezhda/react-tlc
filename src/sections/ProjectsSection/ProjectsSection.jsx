@@ -14,7 +14,7 @@ import s from './ProjectsSection.module.scss';
 
 export default function ProjectsSection() {
   return (
-    <section className={s.projects + ' section'}>
+    <section id='projects' className={s.projects + ' section'}>
       <div className="container">
         <div className={s.projects__container}>
           <div className={s.projects__top}>

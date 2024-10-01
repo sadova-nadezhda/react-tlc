@@ -4,28 +4,23 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import MainContent from './components/MainContent'
 import Popup from './components/Popup'
-import Form from './components/Forms';
+import Form from './components/Form';
 
 import "./styles/main.scss"
-import { useState } from 'react'
 
 export default function App() {  
   const [isOpen, setIsOpen] = useState(false);
 
-  const openPopup = () => {
-    setIsOpen(true);
-  };
+  const openPopup = () => setIsOpen(true);
+  const closePopup = () => setIsOpen(false);
 
-  const closePopup = () => {
-    setIsOpen(false);
-  };
   return (
     <>
-      <Popup>
+      <Popup isOpen={isOpen} closePopup={closePopup}>
         <Form />
       </Popup>
-      <Header />
-      <MainContent />
+      <Header openPopup={openPopup} />
+      <MainContent openPopup={openPopup} />
       <Footer />
     </>
   )

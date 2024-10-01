@@ -10,7 +10,7 @@ import s from './PartnersSection.module.scss'
 
 export default function PartnersSection() {
   return (
-    <section className={s.partners + ' section'}>
+    <section id='partners' className={s.partners + ' section'}>
       <div className={s.partners__container}>
         <div className="container">
           <Title className={s.partners__title}>{partners.title}</Title>

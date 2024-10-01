@@ -1,15 +1,16 @@
 import React from 'react';
 
 import Title from '../../components/Title';
+import Form from '../../components/Form';
 
 import {contacts} from '../../utils/contacts.js';
 
 import s from './ContactsSection.module.scss';
-import ContactsForm from './parts/ContactsForm';
+
 
 export default function ContactsSection() {
   return (
-    <section className={s.contacts + ' section'}>
+    <section id='contacts' className={s.contacts + ' section'}>
       <img className={s.contacts__back} src="/assets/img/earth.png" alt="" />
       <div className="container">
         <div className={s.contacts__container}>
@@ -27,7 +28,7 @@ export default function ContactsSection() {
                 <a href={contacts.socials.whatsapp} target="_blank" rel="nofollow">Whatsapp</a>
               </div>
             </div>
-            <ContactsForm />
+            <Form short={true} />
           </div>
         </div>
       </div>

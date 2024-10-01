@@ -6,9 +6,8 @@ import Button from '../Button';
 import s from './Header.module.scss';
 
 import logo from '/logo.png';
-import PopupBtn from '../Popup/PopupBtn';
 
-export default function Header() {
+export default function Header({openPopup}) {
 
   useEffect(() => {
     const header = document.querySelector("header");
@@ -66,7 +65,7 @@ export default function Header() {
           </div>
           <div className={s.header__row}>
             <NavMenu classMenu={s.header__menu} classNav={s.header__nav} />
-            <Button className={s.header__call}>Заказать звонок</Button>
+            <Button className={s.header__call} onClick={openPopup}>Заказать звонок</Button>
             <div className={s.header__burger}>
               <span></span>
               <span></span>

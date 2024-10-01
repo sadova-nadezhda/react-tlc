@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Input({ type, placeholder, value, onChange }) {
+export default function Input({ onChange, ...props }) {
   return (
-    <input type={type} value={value} placeholder={placeholder} onChange={e => onChange(e.target.value)} />
+    <input {...props} onChange={e => onChange(e.target.value)} />
   )
 }

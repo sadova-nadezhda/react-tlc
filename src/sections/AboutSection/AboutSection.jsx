@@ -8,9 +8,9 @@ import { about } from '../../utils/about.js';
 
 import s from './AboutSection.module.scss';
 
-export default function AboutSection() {
+export default function AboutSection({openPopup}) {
   return (
-    <section className={s.about + ' section'} style={{backgroundImage:`url('/assets/img/back-1.png')`,}}>
+    <section id='about' className={s.about + ' section'} style={{backgroundImage:`url('/assets/img/back-1.png')`,}}>
       <div className="container">
         <div className={s.about__container}>
           <Title className={s.about__title}>{about.title}</Title>
@@ -20,7 +20,7 @@ export default function AboutSection() {
               <AboutCard key={index} {...card} />
             ))}
           </div>
-          <Button className='button button_light'>Оставить заявку</Button>
+          <Button onClick={openPopup} className='button button_light'>Оставить заявку</Button>
         </div>
       </div>
     </section>

@@ -2,12 +2,12 @@ import React from 'react'
 
 import { hero } from '~/src/utils/hero.js'
 import s from './HeroSection.module.scss'
-import Form from '../../components/Forms'
+import Form from '../../components/Form'
 import Button from '../../components/Button/Button'
 
-export default function HeroSection() {
+export default function HeroSection({openPopup}) {
   return (
-    <section className={s.hero + ' section-top'}>
+    <section id='hero' className={s.hero + ' section-top'}>
       <div className="container">
         <div className={s.hero__container}>
           <div className={s.hero__row}>
@@ -20,9 +20,9 @@ export default function HeroSection() {
           <div className={s.hero__wrap}>
             { window.innerWidth > 767 ?
               <div className={s.hero__application}>
-                <Form />
+                <Form short={false} />
               </div> : 
-              <Button className={ s.hero__btn_mb + " popup__btn button"}>Оставить заявку</Button> 
+              <Button onClick={openPopup} className={ s.hero__btn_mb + " popup__btn button"}>Оставить заявку</Button> 
             }
             <div className={s.hero__img}><img src={hero.img} alt="" /></div>
           </div>

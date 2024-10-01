@@ -6,10 +6,10 @@ export default function NavMenu({classMenu, classNav}) {
   return (
     <nav className={classNav + ' ' + s.nav}>
       <ul className={classMenu + ' ' + s.menu}>
-        <li><a href="">Услуги</a></li>
-        <li><a href="">О компании</a></li>
-        <li><a href="">Партнеры</a></li>
-        <li><a href="">Контакты</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#about">О компании</a></li>
+        <li><a href="#partners">Партнеры</a></li>
+        <li><a href="#contacts">Контакты</a></li>
       </ul>
     </nav>
   )
