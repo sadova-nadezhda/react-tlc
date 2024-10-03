@@ -26,7 +26,7 @@
   }
   &__btn {
     width: 100% !important;
-    min-width: unset;
+    min-width: unset !important;
     color: var(--white, #FFFFFF);
     background-color: var(--primary-green, #16676B);
     &_mb {

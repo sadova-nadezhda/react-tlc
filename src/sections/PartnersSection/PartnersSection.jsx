@@ -13,7 +13,7 @@ export default function PartnersSection() {
     <section id='partners' className={s.partners + ' section'}>
       <div className={s.partners__container}>
         <div className="container">
-          <Title className={s.partners__title}>{partners.title}</Title>
+          <Title component='h2' className={s.partners__title}>{partners.title}</Title>
         </div>
         <div className={s.partners__marquees}>
           <PartnersRow partners={partners} behavior="alternate" direction="right" loop />

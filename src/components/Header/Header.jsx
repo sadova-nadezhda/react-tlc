@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
+import { motion } from "framer-motion";
 import classNames from 'classnames';
 
 import NavMenu from '../NavMenu';
@@ -12,7 +13,9 @@ import s from './Header.module.scss';
 export default function Header({ openPopup }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 520);
   const [isOpen, setIsOpen] = useState(window.innerWidth > 767);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const headerRef = useRef(null);
+
 
   const updateHeaderState = () => {
     setIsMobile(window.innerWidth <= 520);
@@ -20,8 +23,27 @@ export default function Header({ openPopup }) {
   };
 
   const handleScroll = () => {
-    if (headerRef.current) {
-      headerRef.current.classList.toggle("scroll", window.scrollY > 50);
+    const currentScrollPos = window.scrollY;
+    const header = headerRef.current;
+
+    if (header) {
+      if (prevScrollPos > currentScrollPos || currentScrollPos === 0) {
+        header.style.top = "0px";
+      } else {
+        header.style.top = "-110px";
+      }
+
+      if (currentScrollPos > 10) {
+        header.classList.add(s.active);
+        header.classList.remove(s.nonactive);
+      } else {
+        header.classList.add(s.nonactive);
+        header.classList.remove(s.active);
+      }
+
+      setPrevScrollPos(currentScrollPos);
+
+      header.classList.toggle("scroll", window.scrollY > 50);
     }
   };
 
@@ -38,10 +60,16 @@ export default function Header({ openPopup }) {
       window.removeEventListener('resize', updateHeaderState);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [prevScrollPos]);
 
   return (
-    <header className={s.header} ref={headerRef}>
+    <motion.header 
+      className={s.header} 
+      ref={headerRef}
+      initial={{ opacity: 0, y: -50 }} // Начальное состояние
+      animate={{ opacity: 1, y: 0 }}   // Конечное состояние
+      transition={{ duration: 0.8, ease: 'easeInOut' }} // Параметры анимации
+    >
       <div className="container">
         <div className={s.header__container}>
           <div className={s.header__row}>
@@ -63,6 +91,6 @@ export default function Header({ openPopup }) {
           </div>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }

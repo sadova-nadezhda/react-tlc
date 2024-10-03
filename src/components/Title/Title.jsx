@@ -1,9 +1,23 @@
-import React from 'react'
+import React from 'react';
+import clsx from 'clsx';
+import { motion } from "framer-motion";
 
-import s from './Title.module.scss'
+import BaseTitle from './BaseTitle';
 
-export default function Title({className, children}) {
+import s from './Title.module.scss';
+
+const Title = ({ className, component: Component = 'h1', ...props }) => {
   return (
-    <h2 className={className + ' ' + s.title + ' ' + s.title_up}>{children}</h2>
-  )
-}
+    <BaseTitle
+      component={Component}
+      className={clsx(
+        className,
+        s.title,
+        s.title_up 
+      )}
+      {...props}
+    />
+  );
+};
+
+export default Title;

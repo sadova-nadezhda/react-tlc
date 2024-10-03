@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 import Title from '../../components/Title';
 import Button from '../../components/Button';
@@ -18,7 +18,7 @@ export default function ProjectsSection() {
       <div className="container">
         <div className={s.projects__container}>
           <div className={s.projects__top}>
-            <Title className={s.projects__title}>{projects.title}</Title>
+            <Title component='h2' className={s.projects__title}>{projects.title}</Title>
             <div className={s.projects__arrows}>
               <Button className={s.projects__arrow  + " projects-prev"}>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,9 +33,13 @@ export default function ProjectsSection() {
             </div>
           </div>
           <Swiper
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
             spaceBetween={10}
             slidesPerView={1}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
             loop
             navigation={{
               prevEl: '.projects-prev',

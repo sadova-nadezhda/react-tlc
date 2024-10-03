@@ -5,6 +5,7 @@
   right: 0;
   width: 100%;
   z-index: 9;
+  transition: top 1s ease;
   &__container {
     display: flex;
     flex-direction: column;

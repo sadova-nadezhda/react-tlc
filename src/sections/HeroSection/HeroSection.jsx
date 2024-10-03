@@ -4,6 +4,7 @@ import { hero } from '~/src/utils/hero.js'
 import s from './HeroSection.module.scss'
 import Form from '../../components/Form'
 import Button from '../../components/Button/Button'
+import Title from '../../components/Title'
 
 export default function HeroSection({openPopup}) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
@@ -23,11 +24,8 @@ export default function HeroSection({openPopup}) {
       <div className="container">
         <div className={s.hero__container}>
           <div className={s.hero__row}>
-            <h1 className={s.hero__title}>
-              <span>{hero.span1}</span>
-              <span>{hero.span2}</span>
-            </h1>
-            <div className={s.hero__subtitle}>{hero.subtitle}</div>
+            <Title className={s.hero__title}>{hero.title}</Title>
+            <Title component='h4' className={s.hero__subtitle}>{hero.subtitle}</Title>
           </div>
           <div className={s.hero__wrap}>
             {!isMobile ? (
