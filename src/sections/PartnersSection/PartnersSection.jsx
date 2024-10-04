@@ -1,25 +1,34 @@
-import React from 'react'
+import React from 'react';
 
-import Title from '../../components/Title'
-import PartnersRow from './parts/PartnersRow'
+import Title from '../../components/Title';
+import PartnersRow from './parts/PartnersRow';
 
-import { partners } from '../../utils/partners.js'
-import { partners2 } from '../../utils/partners2.js'
+import { partners } from '../../utils/partners.js';
 
-import s from './PartnersSection.module.scss'
+import s from './PartnersSection.module.scss';
 
 export default function PartnersSection() {
+  const { cards, title } = partners;
+  const midIndex = Math.ceil(cards.length / 2);
+
   return (
-    <section id='partners' className={s.partners + ' section'}>
+    <section id='partners' className={`${s.partners} section`}>
       <div className={s.partners__container}>
         <div className="container">
-          <Title component='h2' className={s.partners__title}>{partners.title}</Title>
+          <Title component='h2' className={s.partners__title}>{title}</Title>
         </div>
         <div className={s.partners__marquees}>
-          <PartnersRow partners={partners} behavior="alternate" direction="right" loop />
-          <PartnersRow partners={partners2} behavior="alternate" direction="left" loop />
+          {['right', 'left'].map((direction, index) => (
+            <PartnersRow 
+              key={direction} 
+              partners={cards.slice(index * midIndex, (index + 1) * midIndex)} 
+              behavior="alternate" 
+              direction={direction} 
+              loop 
+            />
+          ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

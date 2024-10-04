@@ -15,6 +15,21 @@ export const partners = {
     },
     {
       img: '/assets/img/partners-5.png'
+    },
+    {
+      img: '/assets/img/partners-6.png'
+    },
+    {
+      img: '/assets/img/partners-7.png'
+    },
+    {
+      img: '/assets/img/partners-8.png'
+    },
+    {
+      img: '/assets/img/partners-9.png'
+    },
+    {
+      img: '/assets/img/partners-10.png'
     }
   ]
 }

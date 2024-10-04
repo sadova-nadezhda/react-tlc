@@ -7,7 +7,7 @@ export default function PartnersRow({partners, ...props}) {
   return (
     <marquee {...props}>
       <div className={s.partners__row}>
-        {partners.cards.map((card, index) => (
+        {partners.map((card, index) => (
           <PartnersCard key={index} {...card} />
         ))}
       </div>
