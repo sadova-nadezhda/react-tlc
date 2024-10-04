@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -6,7 +6,7 @@ import MainContent from './components/MainContent'
 import Popup from './components/Popup'
 import Form from './components/Form';
 
-import "./styles/main.scss"
+import "./styles/main.scss";
 
 export default function App() {  
   const [isOpen, setIsOpen] = useState(false);
