@@ -64,7 +64,7 @@ export default function ContactsSection() {
                 <a href={contacts.socials.whatsapp} target="_blank" rel="nofollow">Whatsapp</a>
               </div>
             </div>
-            <Form isShort />
+            <Form isShort formName="Контакты - Оставить заявку" />
           </div>
         </div>
       </div>

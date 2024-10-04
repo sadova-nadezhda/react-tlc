@@ -30,7 +30,7 @@ export default function HeroSection({openPopup}) {
           <div className={s.hero__wrap}>
             {!isMobile ? (
               <div className={s.hero__application}>
-                <Form />
+                <Form formName="Главный блок - Оставить заявку" />
               </div>
             ) : (
               <Button onClick={openPopup} className={`${s.hero__btn_mb} popup__btn button`}>

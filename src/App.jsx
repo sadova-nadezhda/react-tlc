@@ -17,7 +17,7 @@ export default function App() {
   return (
     <>
       <Popup isOpen={isOpen} closePopup={closePopup}>
-        <Form />
+        <Form formName="Модальное окно - Заказать звонок" />
       </Popup>
       <Header openPopup={openPopup} />
       <MainContent openPopup={openPopup} />

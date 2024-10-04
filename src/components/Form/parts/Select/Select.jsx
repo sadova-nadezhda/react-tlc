@@ -1,22 +1,13 @@
-import React, {useState} from 'react'
+import React from 'react';
 
-export default function Select({ options }) {
-  const [selectedOption, setSelectedOption] = useState('default');
-
-  const handleChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
+export default function Select({ options, value, onChange, ...props }) {
   return (
-    <select value={selectedOption} onChange={handleChange}>
-      {options.map((option) => (
-        <option 
-          key={option.value} 
-          value={option.value} 
-          disabled={option.disabled || false}
-        >
-          {option.label}
+    <select value={value} onChange={onChange} {...props}>
+      {options.map(({ value, label, disabled }) => (
+        <option key={value} value={value} disabled={disabled || false}>
+          {label}
         </option>
       ))}
     </select>
-  )
+  );
 }
